@@ -1,0 +1,159 @@
+/* ===== GALLERY ===== */
+.gallery {
+  border-top: 1px solid var(--line);
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin: -24px 0 40px;
+}
+
+.filters__btn {
+  padding: 8px 18px;
+  font-size: 12px;
+  color: var(--ink-soft);
+  background: var(--bg-card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-pill);
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.filters__btn:hover {
+  background: var(--line);
+}
+
+.filters__btn[aria-pressed='true'] {
+  color: var(--ink-light);
+  background: var(--ink);
+  border-color: var(--ink);
+}
+
+.gallery__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+/* Фильтрация только через CSS: состояние лежит в data-filter */
+.gallery__grid[data-filter='cut'] .tile:not([data-cat='cut']),
+.gallery__grid[data-filter='color'] .tile:not([data-cat='color']),
+.gallery__grid[data-filter='salon'] .tile:not([data-cat='salon']) {
+  display: none;
+}
+
+.tile {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  animation: tile-in 0.4s ease both;
+}
+
+.tile__img {
+  position: relative;
+  aspect-ratio: 4 / 5;
+  background-color: #d9d2c4;
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+  overflow: hidden;
+  transition: transform 0.4s ease;
+}
+
+.tile:hover .tile__img {
+  transform: scale(1.015);
+}
+
+.tile__tag {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  padding: 4px 12px;
+  font-size: 11px;
+  color: var(--ink);
+  background: rgba(250, 247, 240, 0.94);
+  border-radius: var(--radius-pill);
+}
+
+.tile__caption {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 0 4px;
+  font-size: 13px;
+  color: var(--ink-soft);
+}
+
+.tile__caption .icon {
+  width: 1.1em;
+  height: 1.1em;
+  transition: transform 0.25s ease;
+}
+
+.tile:hover .tile__caption .icon {
+  transform: translate(2px, -2px);
+}
+
+.insta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  width: fit-content;
+  max-width: 100%;
+  margin: 48px auto 0;
+  padding: 14px 24px;
+  font-size: 13px;
+  color: var(--ink-soft);
+  background: var(--bg-card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  transition: border-color 0.2s ease;
+}
+
+.insta:hover {
+  border-color: var(--ink-soft);
+}
+
+.insta__text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.4;
+}
+
+.insta__text strong {
+  font-weight: 600;
+  color: var(--ink);
+}
+
+@keyframes tile-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (max-width: 900px) {
+  .gallery__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 560px) {
+  .gallery__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tile {
+    animation: none;
+  }
+}

@@ -1,0 +1,143 @@
+/* ===== SERVICES / ПРАЙС ===== */
+.services {
+  border-top: 1px solid var(--line);
+}
+
+.services__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: start;
+  gap: 24px;
+}
+
+.price-card {
+  padding: 32px;
+  background: var(--bg-card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+}
+
+.price-card__head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.price-card__title {
+  flex: 1;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.price-card__list {
+  display: flex;
+  flex-direction: column;
+}
+
+.price-item {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 18px 0;
+  border-top: 1px solid var(--line);
+}
+
+.price-item:first-child {
+  border-top: 0;
+  padding-top: 0;
+}
+
+.price-item:last-child {
+  padding-bottom: 0;
+}
+
+.price-item__row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.price-item__name {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.price-item__price {
+  margin-left: auto;
+  font-size: 14px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.price-item__desc {
+  max-width: 90%;
+  font-size: 12px;
+  line-height: 1.55;
+  color: var(--ink-soft);
+}
+
+/* Плашка с вопросом */
+.note {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 56px;
+  padding: 20px 24px;
+  background: var(--bg-card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+}
+
+.note > .icon {
+  width: 40px;
+  height: 40px;
+  padding: 10px;
+  color: var(--sage);
+  background: var(--sage-soft);
+  border-radius: 12px;
+  background-clip: padding-box;
+  -webkit-mask: none;
+  mask: none;
+  position: relative;
+}
+
+.note > .icon::before {
+  content: '';
+  position: absolute;
+  inset: 10px;
+  background: var(--sage);
+  -webkit-mask: var(--icon) center / contain no-repeat;
+  mask: var(--icon) center / contain no-repeat;
+}
+
+.note__text {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  font-size: 12px;
+  color: var(--ink-soft);
+}
+
+.note__text strong {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+@media (max-width: 1000px) {
+  .services__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .note {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .price-card {
+    padding: 24px;
+  }
+}
