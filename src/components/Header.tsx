@@ -38,10 +38,6 @@ export default function Header({ t, lang, onLangChange }: Props) {
           <a className="icon-btn" href={`tel:${info.phoneRaw}`} aria-label={t.call}>
             <span className="icon icon--phone" />
           </a>
-          <a className="btn btn--dark btn--small" href="#contact">
-            {t.book}
-            <span className="icon icon--calendar" />
-          </a>
           <a className="icon-btn icon-btn--dark" href="#contact" aria-label={t.account}>
             <span className="icon icon--user" />
           </a>

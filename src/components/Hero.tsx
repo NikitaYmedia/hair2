@@ -8,10 +8,6 @@ export default function Hero({ t }: { t: Content['hero'] }) {
         <p className="hero__text">{t.text}</p>
 
         <div className="hero__actions">
-          <a className="btn btn--dark" href="#contact">
-            {t.primary}
-            <span className="icon icon--calendar" />
-          </a>
           <a className="btn btn--glass" href="#services">
             {t.secondary}
             <span className="icon icon--arrow-right" />

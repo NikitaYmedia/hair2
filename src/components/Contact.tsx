@@ -79,10 +79,6 @@ export default function Contact({ t }: { t: Content['contact'] }) {
                   <a href={`mailto:${info.email}`}>{info.email}</a>
                 </div>
               </div>
-              <a className="btn btn--light btn--small" href={`mailto:${info.email}`}>
-                {t.bookOnline}
-                <span className="icon icon--calendar" />
-              </a>
             </div>
 
             <p className="card__label card__label--caps">{t.transportTitle}</p>
