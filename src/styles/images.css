@@ -22,7 +22,7 @@
 
 /* Блок "Om Klip & Ro" */
 .about__photo {
-  background-image: url('/public/images/Снимок\ экрана\ 2026-11-12\ 114029.png');
+  background-image: url('https://img.magnific.com/free-photo/hairdresser-taking-care-her-client_23-2149319805.jpg?semt=ais_hybrid&w=740&q=80');
   background-color: #d9d2c4;
 }
 
@@ -32,15 +32,15 @@
 }
 
 .tile__img--2 {
-  background-image: url('/public/images/Снимок\ экрана\ 2026-11-12\ 112029.png ');
+  background-image: url('https://adpo-edu.ru/uplfile/news_image/Parikmaher_gde_uchitysya.jpg');
 }
 
 .tile__img--3 {
-  background-image: url('/public/images/Снимок\ экрана\ 2026-11-12\ 112157.png');
+  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_q_mbgmLFED2oNBLJyzg7H66Tq3cSuYN0uhjqN3GYHe5WQtmOgIQnWg0&s=10');
 }
 
 .tile__img--4 {
-  background-image: url('/public/images/Снимок\ экрана\ 2026-11-12\ 112113.png');
+  background-image: url('https://www.sikorsky.academy/uploads/blog/main_image/271/main_1533289795975.jpg');
 }
 
 .tile__img--5 {
@@ -48,5 +48,5 @@
 }
 
 .tile__img--6 {
-  background-image: url('/public/images/Снимок\ экрана\ 2026-11-12\ 114205.png  ');
+  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFbeAcjKLv7bWACwCWoiqfqq1Dpo9-yi1FFJWEmcZKtkSZsTBY6DqH5OGu&s=10');
 }
